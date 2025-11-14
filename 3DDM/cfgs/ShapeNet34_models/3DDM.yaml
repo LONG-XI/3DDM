@@ -1,0 +1,14 @@
+
+dataset : {
+  train : { _base_: cfgs/dataset_configs/ShapeNet-34.yaml, 
+            others: {subset: 'train'}},
+  val : { _base_: cfgs/dataset_configs/ShapeNet-34.yaml, 
+            others: {subset: 'test'}},
+  test : { _base_: cfgs/dataset_configs/ShapeNet-34.yaml, 
+            others: {subset: 'test'}}}
+  
+total_bs : 32
+step_per_update : 1
+max_epoch : 4000
+
+consider_metric: CDL1
